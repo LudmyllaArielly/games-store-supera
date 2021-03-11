@@ -29,6 +29,4 @@ desorganizaçâo deixando mais prático a conversão de (Data Transfer Object) d
 git clone https://github.com/LudmyllaArielly/games-store-supera
 cd game-store-supera
 
-##Pré-requisitos
-mvn --version
 
