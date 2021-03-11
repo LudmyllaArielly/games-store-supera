@@ -8,5 +8,6 @@ import com.game.store.model.Product;
 @Repository
 @Transactional
 public interface ProductRepository extends JpaRepository<Product, Long> {
-
+	
+	Product findByCode(Integer code);
 }
