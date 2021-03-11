@@ -1,8 +1,8 @@
-<h1 align="center">Games Store</h1>
-<p align="center">
-O projeto consiste em um Desafio proposto pela Supera Inovação em Tecnologia, onde é 
+##Games Store
+
+##O projeto consiste em um Desafio proposto pela Supera Inovação em Tecnologia, onde é 
 preciso construir uma camada de serviço como exemplo de um ecommerce de games, 
-utlizando linguagem de programação Java</p>
+utlizando linguagem de programação Java
 
 ##Tecnologias usadas:
 -Spring framework
@@ -25,4 +25,10 @@ utlizando o swagger, ele também gera as estruturas json automáticamente que ac
 Mapstruct é um gerador de código que facilita muito o desenvolvimento, evitando grande blocos de códigos,
 desorganizaçâo deixando mais prático a conversão de (Data Transfer Object) dto.
 
-##
+##Iniciando
+git clone https://github.com/LudmyllaArielly/games-store-supera
+cd game-store-supera
+
+##Pré-requisitos
+mvn --version
+
