@@ -12,10 +12,13 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 
 import com.game.store.model.enums.Status;
 
 @Entity
+@Table(uniqueConstraints = @UniqueConstraint(columnNames = "code", name = "code_uk"))
 public class Cart implements Serializable {
 	private static final long serialVersionUID = 1L;
 

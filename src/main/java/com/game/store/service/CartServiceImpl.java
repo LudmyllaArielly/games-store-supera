@@ -78,6 +78,7 @@ public class CartServiceImpl implements CartService {
 	@Override
 	public void checkoutCart(Cart cart) {
 		Optional<Cart> cartId = cartRepository.findById(cart.getId());
+		cart.setCartItems(cartId.get().getCartItems());
 		cart.setTotal(cartId.get().getTotal());
 		cart.setShipping(cartId.get().getShipping());
 		cart.setCode(cartId.get().getCode());
@@ -121,6 +122,7 @@ public class CartServiceImpl implements CartService {
 		cart.setTotal(totalPriceOfCartItems(cart));
 		cart.setShipping(returnsTheShipping(carts));
 		cart.setStatus(Status.OPEN);
+		cart.setCode(carts.getCode());
 		cartRepository.save(cart);
 	}
 

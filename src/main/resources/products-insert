@@ -1,0 +1,21 @@
+INSERT INTO `games-store`.product(id,code,image,name, price, score) values
+(1,'1111','mario-kart.pnp', 'Mario Kart 5', '158.31','600');
+INSERT INTO `games-store`.product(id,code,image,name, price, score) values
+(2,'1112','farm-simulator.png', 'Farm Simulator 21', '69.42','550');
+INSERT INTO `games-store`.product(id,code,image,name, price, score) values
+(3,'1113','euro-truck.png', 'Euro Truck 5', '154.46','700');
+
+INSERT INTO `games-store`.product(id,code,image,name, price, score) values
+(4,'1114','call-of-duty-infinite-warfare.png', 'Call Of Duty Infinite Warfare', '49.90','80');
+INSERT INTO `games-store`.product(id,code,image,name, price, score) values
+(5,'1115','the-witcher-iii-wild-hunt.png', 'The Witcher III Wild Hunt', '129.50','250');
+INSERT INTO `games-store`.product(id,code,image,name, price, score) values
+(6,'1116','call-of-duty-wwii.png', 'Call Of Duty WWII', '249.99','205');
+INSERT INTO `games-store`.product(id,code,image,name, price, score) values
+(7,'1117','mortal-kombat-xl.png', 'Mortal Kombat XL', '69.99','150');
+INSERT INTO `games-store`.product(id,code,image,name, price, score) values
+(8,'1118','shards-of-darkness.png', 'Shards of Darkness', '71.49','158');
+INSERT INTO `games-store`.product(id,code,image,name, price, score) values
+(9,'1119','horizon-zero-dawn.png', 'Horizon Zero Dawn', '89.90','155');
+INSERT INTO `games-store`.product(id,code,image,name, price, score) values
+(10,'1120','fifa-18.png', 'Fifa 2018', '258.99','380');
