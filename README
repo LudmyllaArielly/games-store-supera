@@ -1,0 +1,28 @@
+<h1 align="center">Games Store</h1>
+<p align="center">
+O projeto consiste em um Desafio proposto pela Supera Inovação em Tecnologia, onde é 
+preciso construir uma camada de serviço como exemplo de um ecommerce de games, 
+utlizando linguagem de programação Java</p>
+
+##Tecnologias usadas:
+-Spring framework
+-Swagger
+-MapStruct
+-Maven
+-Linguagem de programação java
+-Mysql
+
+##Porque usar spring framework
+É framework que facilita bastante o desenvolvimento, deixa o código mais limpo e légivel além disso,
+proporciona várias ferramentas embutidas, é mais fácil de manter, possui anotations muito eficientes e 
+acelera a produtividade
+
+##Porque usar Swagger
+O swagger é um framework para descrição de consumo de apis restfull, além de ser mais fácil documentar
+utlizando o swagger, ele também gera as estruturas json automáticamente que acelera o desenvolvimento.
+
+##Porque usar mapstruct
+Mapstruct é um gerador de código que facilita muito o desenvolvimento, evitando grande blocos de códigos,
+desorganizaçâo deixando mais prático a conversão de (Data Transfer Object) dto.
+
+##

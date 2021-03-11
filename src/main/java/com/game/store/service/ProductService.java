@@ -11,5 +11,7 @@ public interface ProductService {
 	List<Product> productOrderByPrice();
 
 	List<Product> productOrderByScore();
+	
+	List<Product> productOrderAlphabetical();
 
 }

@@ -1,5 +1,7 @@
 package com.game.store.service;
 
+
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -36,5 +38,13 @@ public class ProductServiceImpl implements ProductService{
 				.stream().sorted(Comparator.comparing(Product::getScore))
 				.collect(Collectors.toList());
 		return products;
+	}
+
+	@Override
+	public List<Product> productOrderAlphabetical() {
+		List<Product> product = new ArrayList<Product>(productRepository.findAll());
+		product.sort(Comparator.comparing(Product::getName).reversed());
+		
+		return product;
 	}
 }

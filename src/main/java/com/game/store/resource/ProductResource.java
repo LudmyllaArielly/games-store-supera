@@ -38,5 +38,15 @@ public class ProductResource {
 			return new ResponseEntity<List<Product>>(HttpStatus.BAD_REQUEST);
 		}
 	}
+	
+	@GetMapping()
+	public ResponseEntity<List<Product>> productOrderAlphabetical() {
+		try {
+			List<Product> products = productService.productOrderAlphabetical();
+			return new ResponseEntity<List<Product>>(products, HttpStatus.OK);
+		}catch (Exception e) {
+			return new ResponseEntity<List<Product>>(HttpStatus.BAD_REQUEST);
+		}
+	}
 
 }

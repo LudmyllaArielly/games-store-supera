@@ -134,8 +134,11 @@ public class CartServiceImpl implements CartService {
 		for (int i = 0; i < carts.getCartItems().size(); i++) {
 			Integer cartItemsCode = carts.getCartItems().get(i).getProduct().getCode();
 			Integer newCartItemCode = cartItems;
-
-			if (newCartItemCode.equals(cartItemsCode)) {
+			
+			if(carts.getStatus().equals(Status.CLOSED)) {
+				throw new IllegalArgumentException("Could not add item because the cart is finalized.");
+			}
+			else if (newCartItemCode.equals(cartItemsCode)) {
 				throw new IllegalArgumentException("Item already exists in the cart.");
 			}
 		}
