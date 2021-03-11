@@ -43,7 +43,7 @@ public class ProductServiceImpl implements ProductService{
 	@Override
 	public List<Product> productOrderAlphabetical() {
 		List<Product> product = new ArrayList<Product>(productRepository.findAll());
-		product.sort(Comparator.comparing(Product::getName).reversed());
+		product.sort(Comparator.comparing(Product::getName));
 		
 		return product;
 	}
