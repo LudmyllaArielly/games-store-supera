@@ -22,7 +22,7 @@ utlizando linguagem de programação Java.
 ### Porque usar spring framework
   É framework que facilita bastante o desenvolvimento, deixa o código mais limpo e légivel além disso,
 proporciona várias ferramentas embutidas, é mais fácil de manter, possui anotations muito eficientes e 
-acelera a produtividade
+acelera a produtividade.
 
 ### Porque usar Swagger
   O swagger é um framework para descrição de consumo de apis restfull, além de ser mais fácil documentar
@@ -33,67 +33,49 @@ utlizando o swagger, ele também gera as estruturas json automáticamente que ac
 desorganizaçâo deixando mais prático a conversão de (Data Transfer Object) dto.
 
 ### Iniciando
-git clone https://github.com/LudmyllaArielly/games-store-supera 
- 
+git clone https://github.com/LudmyllaArielly/games-store-supera \
 cd game-store-supera
 
 ### Pré-requisitos
-mvn --version 
-
-Ver a indicação da versão do mavem instalada como também, a versão do JDK, dentre outras.
+mvn --version\
+Ver a indicação da versão do mavem instalada como também, a versão do JDK, dentre outras.\
 Esses requisistos são obrigátorios,assim é necessário definir corretamentecas variáveis de ambiente JAVA_HOME E M2_HOME.
 
 ### Compilar
--mvn compile
-
+-mvn compile\
 Esse comando compila o projeto e deposita resultados no diretório target.
 
 ### Empacontando o projeto
--mvn package
-
+- mvn package\
 Gera o arquivo games-store-supera-jar no diretório target, esse arquivo não é executável. Para verificar o conteúdo do arquivo execute o comando jar vft.
 
--mvn package -P executavel-dir
-
+- mvn package -P executavel-dir\
 Gera o arquivo games-store-supera.jar, executável. Para executar utilize o comando java -jar target/games-store-supera-dir.jar
 
--mvn package -P api
-
+- mvn package -P api\
 Gera arquivo executável em conjunto com todas as dependências juntas em um único arquivo target/api.jar
 
 ### Executando a aplicação e a RESTFul API
   Para executar a aplicação utilize o comando java -jar target/api.jar ou mvn spring-boot:run. Desssa forma, 
-é colocada em execução a Api gerada por mvn package -P Api na porta 8080.
-
+é colocada em execução a Api gerada por mvn package -P Api na porta 8080.\
 Exemplo de endereço:http://localhost:8080/carts
 
 ### A Api Games Store conta com os seguintes end-points
-
 ##### cart-resource 
-
--/carts listAllCart
-
--/carts addItems
-
--/carts removeItens
-
--/carts/{id} findByCart
-
--/carts/{id} addMoreItems
-
--/carts/{id} checkout
+*/carts listAllCart\
+*/carts addItems\
+*/carts removeItens\
+*/carts/{id} findByCart\
+*/carts/{id} addMoreItems\
+*/carts/{id} checkout
 
 ##### product-resource 
-
--/products/orderbyalphabetical
-
--/products/orderbyprice
-
--/products/orderbyscore
+*/products/orderbyalphabetical\
+*/products/orderbyprice\
+*/products/orderbyscore
 
 ### Informações extras
-Contém um file de insert de produtos
-
+Contém um file de insert de produtos.\
 caminho src/main/resources/products-insert.file
 
 
