@@ -34,7 +34,8 @@ public class CartServiceImpl implements CartService {
 		Cart cartCreated = cartRepository.save(cart);
 		return cartCreated.getId();
 	}
-
+	
+	/* Obtem o subtotal items do carrinho e retona o total para o carrinho */
 	private Double totalPriceOfCartItems(Cart cart) {
 		Double total = 0.0;
 		Double subtotal = 0.0;
@@ -44,7 +45,11 @@ public class CartServiceImpl implements CartService {
 		}
 		return Useful.roundsValue(total);
 	}
-
+	
+	/* Verifica a quantidade de items no carrinho e
+	 * adiciona 10.00 de frete para cada item adicionado mas,
+	 * se o valor total for maior que 250.00 o frete zera
+	 * */
 	private Double returnsTheShipping(Cart cart) {
 		Double priceTotalOfCart = cart.getTotal();
 		Double shipping = 10.00;
@@ -72,7 +77,8 @@ public class CartServiceImpl implements CartService {
 		Optional<Cart> cart = cartRepository.findById(id);
 		return cart;
 	}
-
+	
+	/* Finaliza o carrinho mudando o seu status para fechado*/
 	@Transactional
 	@Modifying
 	@Override
@@ -84,7 +90,8 @@ public class CartServiceImpl implements CartService {
 		cart.setCode(cartId.get().getCode());
 		cartRepository.save(cart);
 	}
-
+	
+	/* Remove o item do carrinho, retirando-o da lista e excluindo o item*/
 	@Override
 	public void removeItems(Long idCart, Long idCartItems) {
 		Optional<Cart> cart = cartRepository.findById(idCart);
@@ -97,7 +104,7 @@ public class CartServiceImpl implements CartService {
 			}
 		}
 	}
-
+	/* Atualiza o carrinho após tem um item removido, como total e frete*/
 	@Transactional
 	@Modifying
 	private void updatesTheCartAfterTheItemIsRemoved(Long idCart) {
@@ -107,7 +114,10 @@ public class CartServiceImpl implements CartService {
 		carts.setShipping(returnsTheShipping(carts));
 		cartRepository.save(carts);
 	}
-
+	
+	/* Adiciona mais itens no carrinho se o item não tiver sido adicionado
+	 * e o carrinho não estiver fechado
+	 * */
 	@Transactional
 	@Modifying
 	@Override

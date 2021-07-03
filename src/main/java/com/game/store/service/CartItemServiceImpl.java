@@ -19,7 +19,9 @@ public class CartItemServiceImpl implements CartItemsService {
 
 	@Autowired
 	private ProductService productService;
-
+	
+	/* Procura o produto adicionado ao item e o adiciona na lista
+	 * pega os dados necessários e calcula o subtotal e salva os items*/
 	@Override
 	public List<CartItems> addItemsToCart(List<CartItems> cartItems) {
 		for (int i = 0; i < cartItems.size(); i++) {
@@ -36,7 +38,8 @@ public class CartItemServiceImpl implements CartItemsService {
 		List<CartItems> item = cartItemsRepository.saveAll(cartItems);
 		return item;
 	}
-
+	
+	/*Exclui o items, é chamado quando for remover o item do carrinho*/
 	@Override
 	public void removeItems(Long id) {
 		Optional<CartItems> cartItems = cartItemsRepository.findById(id);
